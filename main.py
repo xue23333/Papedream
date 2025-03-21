@@ -8,17 +8,14 @@ class Player:
 		print(_source.name+" damaged "+self.name+" "+str(_value)+" point(s)!")
 
 class Card:
-	def __init__(self,_id,_mass,_thot,_size)
+    def __init__(self,_id,_mass,_thot,_size):
 		self.id=_id
 		self.mass=_mass
 		self.thot=_thot
 		self.size=_size
 
-def load_language(language_code):
-    """
-    根据语言代码加载对应的 JSON 文件
-    """
-    file_path = os.path.join("locales", f"{language_code}.json")
+def load_lang(lang):
+    file_path = os.path.join("locale", f"{lang}.json")
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             return json.load(file)
@@ -27,9 +24,6 @@ def load_language(language_code):
         return None
 
 def get_localized_message(language_data, key, **kwargs):
-    """
-    获取本地化消息，并支持格式化
-    """
     if key in language_data:
         return language_data[key].format(**kwargs)
     else:
