@@ -1,0 +1,21 @@
+{
+    "papedream":"Papedream 纸之梦",
+    "characters":
+    [
+        {
+            "name":"测试角色",
+            "desciption":"这是一个测试用的角色，它不应该出现在正式版本中。\n如果你看见了它，那说明这游戏有很多特性。",
+            "author":"root"
+        },
+        {
+            "name":"雀",
+            "desciption":"年仅16的高中生，惯用短剑，武力惊人。\n据说她动起真格来，这颗星球上无人能敌。",
+            "author":"_xue233_"
+        },
+        {
+            "name":"量",
+            "desciption":"未知",
+            "author":"小吉祥"
+        }
+    ]
+}
