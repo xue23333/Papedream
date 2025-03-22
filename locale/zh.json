@@ -17,5 +17,9 @@
             "desciption":"未知",
             "author":"小吉祥"
         }
-    ]
+    ],
+    "damage":
+    {
+        "msg":"%s 伤害了 %s %s 点！"
+    }
 }

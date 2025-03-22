@@ -1,39 +1,27 @@
 import random
-import json
+from localization import _
+
+def getMsg(key):
+	return _.get_translation(key)
 
 class Player:
-	def __init__(self,_id):
+	def __init__(self,_id,_name):
 		self.id=_id
+		self.name=_name
 	def playerDamage(self,_source,_value):
-		print(_source.name+" damaged "+self.name+" "+str(_value)+" point(s)!")
+		# print(_source.name+" damaged "+self.name+" "+str(_value)+" point(s)!")
+		print(getMsg("damage.msg")%(_source.name,self.name,str(_value)))
 
 class Card:
-    def __init__(self,_id,_mass,_thot,_size):
+	def __init__(self,_id,_mass,_thot,_size):
 		self.id=_id
 		self.mass=_mass
 		self.thot=_thot
 		self.size=_size
-
-def load_lang(lang):
-    file_path = os.path.join("locale", f"{lang}.json")
-    try:
-        with open(file_path, "r", encoding="utf-8") as file:
-            return json.load(file)
-    except FileNotFoundError:
-        print(f"Error: Language file {file_path} not found.")
-        return None
-
-def get_localized_message(language_data, key, **kwargs):
-    if key in language_data:
-        return language_data[key].format(**kwargs)
-    else:
-        print(f"Warning: Key '{key}' not found in language data.")
-        return ""
-
 
 p1=Player(1,"雀")
 p2=Player(2,"量")
 
 p1.playerDamage(p2,5)
 
-print("Hello Papedream!")
+print(getMsg("papedream"))
