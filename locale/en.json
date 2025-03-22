@@ -1,0 +1,25 @@
+{
+    "papedream":"Papedream",
+    "characters":
+    {
+        "0":{
+            "name":"Test Character",
+            "desciption":"This is a character for testing, it won't be in a release version.\nIf you see this in game, that's a bug.",
+            "author":"root"
+        },
+        "1":{
+            "name":"Auk",
+            "desciption":"A 16-year-old high school student, 惯用短剑，武力惊人。\n据说她动起真格来，这颗星球上无人能敌。",
+            "author":"_xue233_"
+        },
+        "2":{
+            "name":"Quant",
+            "desciption":"Unknown",
+            "author":"_zhu"
+        }
+    },
+    "damage":
+    {
+        "msg":"%s damaged %s %s point(s)!"
+    }
+}

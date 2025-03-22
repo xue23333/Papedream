@@ -19,9 +19,16 @@ class Card:
 		self.thot=_thot
 		self.size=_size
 
-p1=Player(1,"雀")
-p2=Player(2,"量")
+def main():
+	print("请输入语言代码：",end=" ")
+	_.set_locale(input())
+	p1=Player(1,getMsg("characters.1.name"))
+	p2=Player(2,getMsg("characters.2.name"))
+	p1.playerDamage(p2,5)
+	print(getMsg("papedream"))
 
-p1.playerDamage(p2,5)
+	# print("Debug $",end=" ")
+	# print(eval(input()))
 
-print(getMsg("papedream"))
+if __name__=="__main__":
+	main()
