@@ -21,5 +21,13 @@
     "damage":
     {
         "msg":"%s 伤害了 %s %s 点！"
+    },
+    "game":
+    {
+        "start":"游戏开始！"
+    },
+    "info":
+    {
+        "version":"Dev 0000"
     }
 }

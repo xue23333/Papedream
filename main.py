@@ -1,4 +1,5 @@
 import random
+import os
 from localization import _
 
 def getMsg(key):
@@ -19,13 +20,21 @@ class Card:
 		self.thot=_thot
 		self.size=_size
 
+def Game():
+	print(getMsg("game.start"))
+
+def Version():
+	print(getMsg("info.version"))
+
 def main():
 	print("请输入语言代码：",end=" ")
 	_.set_locale(input())
+	Version()
 	p1=Player(1,getMsg("characters.1.name"))
 	p2=Player(2,getMsg("characters.2.name"))
 	p1.playerDamage(p2,5)
 	print(getMsg("papedream"))
+	Game()
 
 	# print("Debug $",end=" ")
 	# print(eval(input()))
