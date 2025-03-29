@@ -9,6 +9,8 @@ class Player:
 	def __init__(self,_id,_name):
 		self.id=_id
 		self.name=_name
+    def useCard(self,_index,_target):
+        print("")
 	def playerDamage(self,_source,_value):
 		# print(_source.name+" damaged "+self.name+" "+str(_value)+" point(s)!")
 		print(getMsg("damage.msg")%(_source.name,self.name,str(_value)))
